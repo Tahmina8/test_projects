@@ -1,0 +1,11 @@
+{% for i in products %}
+
+<li>
+    <P><a href="{% url 'product_detail' i.pk %}">Название: {{ i.product_name }}</a></P>
+    <P>Цена: {{ i.price}}</P>
+    <P>Дата: {{ i.created_date }}</P>
+</li>
+
+{% endfor %}
+
+<button><a href="{% url 'product_create' %}">Create</a></button>
